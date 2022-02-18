@@ -1,3 +1,6 @@
+
+CREATE DATABASE IF NOT EXISTS `chroniclerp`;
+
 USE `chroniclerp`;
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
