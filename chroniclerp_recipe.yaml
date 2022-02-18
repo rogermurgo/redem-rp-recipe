@@ -17,7 +17,7 @@ tasks:
   
   - action: move_path
     src: ./tmp/redm_txadmin_recipe/chroniclerp.png
-    dest: ./redmRP.png
+    dest: ./chroniclerp.png
 
 # Prepare Database
   - action: connect_database  
@@ -50,12 +50,6 @@ tasks:
     src: https://github.com/RedEM-RP/redem_roleplay
     ref: master
     dest: ./resources/[redem]/redem_roleplay   
-
-# db_1.sql update
-  - action: replace_string
-    file: ./resources/[redem]/redem_roleplay/server/sql/db_1.sql
-    search: 'DROP DATABASE IF EXISTS `chroniclerp`;'
-    replace: '' 
 
 # mysql-async    
   - action: download_github
