@@ -20,26 +20,7 @@ tasks:
     dest: ./redmRP.png
 
 # Prepare Database
-  - action: connect_database
-  - action: query_database
-    query: |      
-      DROP DATABASE IF EXISTS `chroniclerp`;
-      CREATE DATABASE IF NOT EXISTS `chroniclerp`;
-
-  - action: write_file
-    file: ./tmp/delete.sql
-    append: true
-    data: |
-      ensure
-
-  - action: replace_string
-    file: ./tmp/delete.sql
-    search: "ensure"
-    replace: "DROP DATABASE IF EXISTS `{{dbName}}`"
-  
-  - action: query_database
-    file: ./tmp/delete.sql
-  
+  - action: connect_database  
   - action: query_database
     file: ./tmp/redm_txadmin_recipe/chroniclerp.sql
 
