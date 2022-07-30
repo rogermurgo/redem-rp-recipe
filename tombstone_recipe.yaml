@@ -1,13 +1,13 @@
 $engine: 3
-name: Tombstone Roleplay
+name: RedEM RP TEST
 version: 1.0.0
-author: DrAceMisanthrope
-description: Tombstone Roleplay RedM
+author: Ankor-io
+description: RedEM RP TEST
 
 tasks:
 #  Download Base Files
   - action: download_github
-    src: https://github.com/FlyingAce015/redm_txadmin_recipe
+    src: https://github.com/rogermurgo/redem-rp-recipe
     ref: main
     dest: ./tmp/redm_txadmin_recipe
   
