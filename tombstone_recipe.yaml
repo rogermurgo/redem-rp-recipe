@@ -9,20 +9,20 @@ tasks:
   - action: download_github
     src: https://github.com/rogermurgo/redem-rp-recipe
     ref: main
-    dest: ./tmp/redm_txadmin_recipe
+    dest: ./tmp/redem-rp-recipe
   
   - action: move_path
-    src: ./tmp/redm_txadmin_recipe/server.cfg
+    src: ./tmp/redem-rp-recipe/server.cfg
     dest: ./server.cfg
   
   - action: move_path
-    src: ./tmp/redm_txadmin_recipe/trp.png
-    dest: ./trp.png
+    src: ./tmp/redem-rp-recipe/logo.png
+    dest: ./logo.png
 
 # Prepare Database
   - action: connect_database  
   - action: query_database
-    file: ./tmp/redm_txadmin_recipe/tombstone.sql
+    file: ./tmp/redem-rp-recipe/tombstone.sql
 
 # STANDALONE CFX
   - action: download_github
